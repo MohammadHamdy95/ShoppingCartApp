@@ -8,18 +8,18 @@ import {FormBuilder, Validators} from "@angular/forms";
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
-show: boolean = false;
+  user: string = "";
 
   constructor(private fb:FormBuilder) { }
   profileForm = this.fb.group({
     userName: ["", [Validators.required,Validators.email]],
     password: ["", [Validators.required,Validators.minLength(8)]]
   })
+  confirmationForm = this.fb.group({
+    confirmationCode: [""]
+  })
 
   ngOnInit(): void {
-  }
-  button(): void {
-    this.show = !this.show;
   }
   singUp(): void {
     Auth.signUp({
@@ -30,13 +30,32 @@ show: boolean = false;
       }
     }).then((user)=>{
       console.log(user.user.getUsername())
+    }).catch((err)=>{
+      console.error(err);
+      if(err.code == "UsernameExistsException"){
+        console.log("user exists")
+      }
     })
   }
+  confirmSignUp(): void {
+    Auth.confirmSignUp(this.user,this.confirmationCode).then((user)=>{
+      console.info("user confirmed")
+    }).catch((err)=>{
+      console.error(err);
+    })
+}
+  signIn(): void {
+    this.user = this.userName;
+  }
+
   get userName(): string {
     return this.profileForm.get("userName")?.value;
   }
   get password(): string {
     return  this.profileForm.get("password")?.value;
+  }
+  get confirmationCode(): string {
+    return this.confirmationForm.get("confirmationCode")?.value;
   }
 
 }

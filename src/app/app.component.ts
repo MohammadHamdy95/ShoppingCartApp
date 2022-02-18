@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Amplify} from "aws-amplify";
-import awsConfig from '../ '
+import {Amplify, Auth} from "aws-amplify";
+import awsConfig from '../aws-exports'
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ import awsConfig from '../ '
 export class AppComponent {
   title = 'untitled';
   constructor() {
-    Amplify.configure(A)
+    Amplify.configure(awsConfig)
+    Auth.configure(awsConfig);
   }
 }

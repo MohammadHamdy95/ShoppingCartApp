@@ -2,4 +2,9 @@
   <input type="text" formControlName="userName">
   <input type="password" formControlName="password">
   <button type="button" [disabled]="!profileForm.valid" (click)="singUp()">Sign up!</button>
+  <button type="button" (click)="signIn()">Sign In!</button>
+</form>
+<form [formGroup]="confirmationForm">
+  <input type="text" formControlName="confirmationCode">
+  <button type="button" (click)="confirmSignUp()">Confirm</button>
 </form>
