@@ -8,14 +8,31 @@ import {WebsitestateService} from "../services/websitestate.service";
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
+  header="Grocery Store"
+  state=Websitestate.LANDINGPAGE
 
-  constructor(private websitestate: WebsitestateService) { }
-
+  constructor(private websitestate: WebsitestateService) {
+    websitestate.websitestate$.subscribe(state=>{
+      this.state=state;
+    })
+  }
+  toggle=false;
   UpdateState(): void {
-    this.websitestate.setWebsiteState(Websitestate.SHOPPINGPAGE)
+    this.toggle=!this.toggle
+    this.websitestate.setWebsiteState(this.toggle?Websitestate.LANDINGPAGE:Websitestate.SHOPPINGPAGE)
   }
 
   ngOnInit(): void {
+  }
+  get Page(): string {
+    switch (this.state){
+      case Websitestate.CARTPAGE:
+        return "Cart Page"
+      case Websitestate.SHOPPINGPAGE:
+        return "Shop"
+      case Websitestate.LANDINGPAGE:
+        return "Home"
+    }
   }
 
 }

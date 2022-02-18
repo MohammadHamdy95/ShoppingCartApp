@@ -7,6 +7,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { InventoryComponent } from './main-page/inventory/inventory.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { LandingPageComponent } from './main-page/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     AuthComponent,
     NavBarComponent,
     InventoryComponent,
-    MainPageComponent
+    MainPageComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

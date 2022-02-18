@@ -9,6 +9,7 @@ import {FormBuilder, Validators} from "@angular/forms";
 })
 export class AuthComponent implements OnInit {
   user: string = "";
+  confirmationToggle: boolean=false;
 
   constructor(private fb:FormBuilder) { }
   profileForm = this.fb.group({

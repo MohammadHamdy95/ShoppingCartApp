@@ -4,8 +4,9 @@
   <button type="button" [disabled]="!profileForm.valid" (click)="singUp()">Sign up!</button>
   <button type="button" (click)="signIn()">Sign In!</button>
 </form>
-<form [formGroup]="confirmationForm">
-  <input type="text" formControlName="confirmationCode">
-  <button type="button" (click)="confirmSignUp()">Confirm</button>
-</form>
-am
+<div *ngIf="confirmationToggle">
+  <form [formGroup]="confirmationForm">
+    <input type="text" formControlName="confirmationCode">
+    <button type="button" (click)="confirmSignUp()">Confirm</button>
+  </form>
+</div>
