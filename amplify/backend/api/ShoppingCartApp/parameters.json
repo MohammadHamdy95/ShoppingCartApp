@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "ShoppingCartApp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authshoppingcartappcc0ca820",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2022-02-18T20:37:44.956Z"
+}

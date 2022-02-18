@@ -1,0 +1,27 @@
+type ItemStack {
+  Item: Item!
+  quantity: Int
+}
+
+type Cart @model @auth(rules: [{allow: groups, groups: ["Admins"], operations: [read, create, update, delete]}, {allow: owner}]) {
+  id: ID!
+  Items: ItemStack!
+}
+
+enum ITEMTYPE {
+  FRUIT
+  VEGITABLE
+}
+
+type Item {
+  name: String!
+  price: Int!
+  itemType: ITEMTYPE!
+  itemNumber: Int!
+}
+
+type Inventory @model @auth(rules: [{allow: groups, groups: ["Admins"], operations: [read, create, update, delete]}, {allow: private, operations: [read]}]) {
+  id: ID!
+  Items: ItemStack!
+}
+ 
