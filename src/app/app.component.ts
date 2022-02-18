@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Amplify} from "aws-amplify";
+import awsConfig from '../ '
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'untitled';
+  constructor() {
+    Amplify.configure(A)
+  }
 }

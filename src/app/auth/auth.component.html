@@ -1,5 +1,5 @@
-<form>
-  <input type="text">
-  <input type="password">
-  <button></button>
+<form [formGroup]="profileForm">
+  <input type="text" formControlName="userName">
+  <input type="password" formControlName="password">
+  <button type="button" [disabled]="!profileForm.valid" (click)="singUp()">Sign up!</button>
 </form>
