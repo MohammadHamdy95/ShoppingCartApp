@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Websitestate} from "../types/websitestate";
+import {WebsitestateService} from "../services/websitestate.service";
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private websitestate: WebsitestateService) { }
+
+  UpdateState(): void {
+    this.websitestate.setWebsiteState(Websitestate.SHOPPINGPAGE)
+  }
 
   ngOnInit(): void {
   }

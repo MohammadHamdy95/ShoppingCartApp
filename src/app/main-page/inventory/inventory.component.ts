@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DataStore} from "aws-amplify";
-import {Inventory, Item, ItemStack, Itemtype} from "../../models";
+import {Inventory, Item, ItemStack, Itemtype} from "../../../models";
 
 @Component({
   selector: 'app-inventory',

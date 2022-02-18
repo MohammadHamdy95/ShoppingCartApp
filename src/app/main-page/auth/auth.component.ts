@@ -13,7 +13,7 @@ export class AuthComponent implements OnInit {
   constructor(private fb:FormBuilder) { }
   profileForm = this.fb.group({
     userName: ["", [Validators.required,Validators.email]],
-    password: ["", [Validators.required,Validators.minLength(8)]]
+    password: ["", [Validators.required,Validators.minLength(5)]]
   })
   confirmationForm = this.fb.group({
     confirmationCode: [""]
