@@ -53,51 +53,51 @@ export class InventoryComponent implements OnInit {
     })
   }
 
-  addPearToCart(): void {
+  addBellPeppersToCart(): void {
     DataStore.save(
       new Cart({
           Items: new ItemStack({
             quantity: 1,
             Item: new Item({
-              name: "pear",
+              name: "bellpepper",
               price: 100,
-              itemType: Itemtype.FRUIT,
+              itemType: Itemtype.VEGITABLE,
               itemNumber: 2
             })
           })
         }
       )
     ).then(item=>{
-      console.log("1 peach was added to cart")
+      console.log("1 Bell Pepper was added to cart")
     })
   }
 
-  addOrangeToCart(): void {
+  addCarrotToCart(): void {
     DataStore.save(
       new Cart({
           Items: new ItemStack({
             quantity: 1,
             Item: new Item({
-              name: "orange",
+              name: "carrot",
               price: 100,
-              itemType: Itemtype.FRUIT,
+              itemType: Itemtype.VEGITABLE,
               itemNumber: 3
             })
           })
         }
       )
     ).then(item=>{
-      console.log("1 orange was added to cart")
+      console.log("1 Carrot was added to cart")
     })
   }
 
-  addBananaToCart(): void {
+  addCherriesToCart(): void {
     DataStore.save(
       new Cart({
           Items: new ItemStack({
             quantity: 1,
             Item: new Item({
-              name: "banana",
+              name: "cherry",
               price: 100,
               itemType: Itemtype.FRUIT,
               itemNumber: 4
@@ -106,11 +106,11 @@ export class InventoryComponent implements OnInit {
         }
       )
     ).then(item=>{
-      console.log("1 Banana was added to cart")
+      console.log("1 LB of cherries were added to cart")
     })
   }
 
-  addBabyCarotToCart(): void {
+  addCucumberToCart(): void {
     DataStore.save(
       new Cart({
           Items: new ItemStack({
@@ -118,33 +118,33 @@ export class InventoryComponent implements OnInit {
             Item: new Item({
               name: "babycarrot",
               price: 100,
-              itemType: Itemtype.VEGITABLE,
+              itemType: Itemtype.FRUIT,
               itemNumber: 5
             })
           })
         }
       )
     ).then(item=>{
-      console.log("1 lb of Baby Carrots were added to cart")
+      console.log("1 Cucumber added to cart")
     })
   }
 
-  addBroccoliToCart(): void {
+  addEggplantToCart(): void {
     DataStore.save(
       new Cart({
           Items: new ItemStack({
             quantity: 1,
             Item: new Item({
-              name: "broccoli",
+              name: "eggplant",
               price: 100,
-              itemType: Itemtype.VEGITABLE,
-              itemNumber: 6
+              itemType: Itemtype.FRUIT,
+              itemNumber: 16
             })
           })
         }
       )
     ).then(item=>{
-      console.log("1 LB of Broccoli was added to cart")
+      console.log("1 Eggplant was added to cart")
     })
   }
 
@@ -167,7 +167,7 @@ export class InventoryComponent implements OnInit {
     })
   }
 
-  addYamToCart(): void {
+  addKiwiToCart(): void {
     DataStore.save(
       new Cart({
           Items: new ItemStack({
@@ -182,7 +182,7 @@ export class InventoryComponent implements OnInit {
         }
       )
     ).then(item=>{
-      console.log("1 Yam was added to cart")
+      console.log("1 Kiwi was added to cart")
     })
   }
 
@@ -319,24 +319,7 @@ export class InventoryComponent implements OnInit {
     })
   }
 
-  addEggplantToCart(): void {
-    DataStore.save(
-      new Cart({
-          Items: new ItemStack({
-            quantity: 1,
-            Item: new Item({
-              name: "eggplant",
-              price: 100,
-              itemType: Itemtype.FRUIT,
-              itemNumber: 16
-            })
-          })
-        }
-      )
-    ).then(item=>{
-      console.log("1 Eggplant was added to cart")
-    })
-  }
+
 
   addPeachToCart(): void {
     DataStore.save(
