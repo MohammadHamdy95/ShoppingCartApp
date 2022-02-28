@@ -1,2 +1,131 @@
-<button type="button" (click)="addInventory()">inventory works!</button>
+<!--<script src="InventoryFunctions.js"></script>-->
+<button type="button" (click)="addAppleToInventory()">Add Apple to Inv</button>
+<button type="button" (click)="addPearToInventory()">Add Pear</button>
+
 <button type="button" (click)="checkItems()">check inventory</button>
+<button type="button" (click)="createCart()">add apple to cart</button>
+<div class="container">
+
+  <h1>OUR SHOP</h1>
+
+  <div id="alerts"></div>
+  <div class="productcont">
+    <div class="product">
+      <h3 class="productname">Apples</h3>
+      <p>1</p>
+      ADD IMAGE HERE
+      <p class="price">$2.00</p>
+      <button type="button" (click)="addAppleToCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h3 class="productname">Oranges</h3>
+      <p>1 kg</p>
+      ADD IMAGE HERE
+      <p class="price">$2.00</p>
+      <button type="button" (click)="addOrangeToCart()">Add to Cart</button>    </div>
+    <div class="product">
+      <h3 class="productname">Banana</h3>
+      <p>1 kg</p>
+      ADD IMAGE HERE
+      <p class="price">$2.00</p>
+      <button type="button" (click)="addBananaToCart()">Add to Cart</button>    </div>
+    <div class="product">
+      <h3 class="productname">Baby Carrot</h3>
+      <p>1 kg</p>
+      ADD IMAGE HERE
+      <p class="price">$2.00</p>
+      <button type="button" (click)="addBabyCarotToCart()">Add to Cart</button>    </div>  <div class="product">
+    <h3 class="productname">Broccoli</h3>
+    <p>1 kg</p>
+    ADD IMAGE HERE
+    <p class="price">$2.00</p>
+    <button type="button" (click)="addBroccoliToCart()">Add to Cart</button>  </div>  <div class="product">
+    <h3 class="productname">Grapes</h3>
+    <p>1 kg</p>
+    ADD IMAGE HERE
+    <p class="price">$2.00</p>
+    <button type="button" (click)="addGrapesToCart()">Add to Cart</button>  </div>  <div class="product">
+    <h3 class="productname">Yam</h3>
+    <p>1 kg</p>
+    ADD IMAGE HERE
+    <p class="price">$2.00</p>
+    <button type="button" (click)="addYamToCart()">Add to Cart</button>  </div>  <div class="product">
+    <h3 class="productname">Strawberry</h3>
+    <p>1 kg</p>
+    ADD IMAGE HERE
+    <p class="price">$2.00</p>
+    <button type="button" (click)="addStrawberryToCart()">Add to Cart</button>  </div>  <div class="product">
+    <h3 class="productname">Corn</h3>
+    <p>1 kg</p>
+    ADD IMAGE HERE
+    <p class="price">$2.00</p>
+    <button type="button" (click)="addCornToCart()">Add to Cart</button>  </div>  <div class="product">
+    <h3 class="productname">Red Bell Pepper</h3>
+    <p>1 kg</p>
+    ADD IMAGE HERE
+    <p class="price">$2.00</p>
+    <button type="button" (click)="addRedBellPepperToCart()">Add to Cart</button>  </div>  <div class="product">
+    <h3 class="productname">Green Bell Pepper</h3>
+    <p>1 kg</p>
+    ADD IMAGE HERE
+    <p class="price">$2.00</p>
+    <button type="button" (click)="addGreenBellPepperToCart()">Add to Cart</button>  </div>
+    <div class="product">
+      <h3 class="productname">Grapefruit</h3>
+      <p>1 kg</p>
+      ADD IMAGE HERE
+      <p class="price">$2.00</p>
+      <button type="button" (click)="addGrapefruitToCart()">Add to Cart</button>    </div>
+
+    <div class="product">
+      <h3 class="productname">Zucchini</h3>
+      <p>1 kg</p>
+      ADD IMAGE HERE
+      <p class="price">$2.00</p>
+      <button type="button" (click)="addZucchiniToCart()">Add to Cart</button>    </div>
+    <div class="product">
+      <h3 class="productname">Peach</h3>
+      <p>1 Apple</p>
+      add image
+      <p class="price">$8.50</p>
+      <button type="button" (click)="addPeachToCart()">Add to Cart</button>    </div>
+
+
+
+
+  </div>
+  <div class="cart-container">
+    <h2>Cart</h2>
+    <table>
+      <thead>
+      <tr>
+        <th><strong>Product</strong></th>
+        <th><strong>Price</strong></th>
+      </tr>
+      </thead>
+      <tbody id="carttable">
+      </tbody>
+    </table>
+    <hr>
+    <table id="carttotals">
+      <tr>
+        <td><strong>Items</strong></td>
+        <td><strong>Total</strong></td>
+      </tr>
+      <tr>
+        <td>x <span id="itemsquantity">0</span></td>
+
+        <td>$<span id="total">0</span></td>
+      </tr></table>
+
+
+    <div class="cart-buttons">
+      <button id="emptycart">Empty Cart</button>
+      <button id="checkout">Checkout</button>
+    </div>
+  </div>
+</div>
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
