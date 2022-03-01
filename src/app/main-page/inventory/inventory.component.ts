@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {DataStore} from "aws-amplify";
+import {Amplify, DataStore} from "aws-amplify";
 import {Cart, Inventory, Item, ItemStack, Itemtype} from "../../../models";
 import * as inventoryFunctions from './InventoryFunctions';
 
@@ -35,7 +35,7 @@ export class InventoryComponent implements OnInit {
   }
 
   addAppleToCart(): void {
-    DataStore.save(
+    Amplify.DataStore.save(
       new Cart({
           Items: new ItemStack({
             quantity: 1,
